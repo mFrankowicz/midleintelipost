@@ -71,7 +71,7 @@ function transformar_api(message){
             }
         }
     }
-    let m_cliente = `Destinatário: ${end_customer.first_name} ${end_customer.last_name}`
+    let m_cliente = `${end_customer.first_name} ${end_customer.last_name}`
     let m_data_prevista = `Data Prevista de Entrega: ${data_prevista.getDay()}/${data_prevista.getMonth()}/${data_prevista.getFullYear()}`
     let m_transportadora = `Transportadora: ${transportadora}`
     let m_historico = `Caminho do pedido:\n${historico}`
