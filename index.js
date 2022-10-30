@@ -74,18 +74,8 @@ function transformar_api(message){
     let client_name = `${end_customer.first_name} ${end_customer.last_name}`
 
     let final_message =  `Destinatário: ${client_name}
-
 Data Prevista de Entrega: ${data_prevista.getDay()}/${data_prevista.getMonth()}/${data_prevista.getFullYear()}
 Transportadora: ${transportadora}
-
-Destino: 
-RUA - ${endereco_rua} 
-NÚMERO - ${endereco_numero}
-BAIRRO - ${endereco_bairro}
-CIDADE - ${endereco_cidade}
-ESTADO - ${endereco_estado}
-CEP - ${endereco_cep}
-
 Caminho do pedido:
 ${historico}
 `
