@@ -66,13 +66,13 @@ function transformar_api(message){
         let prev_m = historico_array[minMax(j-1,0, 1000)].shipment_volume_micro_state.description
         if(m != null){
             if((m.length > 0) && ((m != prev_m))) {
-                historico += `${count} - ocorrido em ${data_evento.getDay()}/${data_evento.getMonth()}/${data_evento.getUTCFullYear()} às ${data_evento.getHours()} horas - ${m}\n`
+                historico += `${count} - ocorrido em ${data_evento.getDate()}/${data_evento.getMonth()+1}/${data_evento.getUTCFullYear()} às ${data_evento.getHours()} horas - ${m}\n`
                 count++
             }
         }
     }
     let m_cliente = `${end_customer.first_name} ${end_customer.last_name}`
-    let m_data_prevista = `Data Prevista de Entrega: ${data_prevista.getDay()}/${data_prevista.getMonth()}/${data_prevista.getFullYear()}`
+    let m_data_prevista = `Data Prevista de Entrega: ${data_prevista.getDate()}/${data_prevista.getMonth()+1}/${data_prevista.getFullYear()}`
     let m_transportadora = `Transportadora: ${transportadora}`
     let m_historico = `Caminho do pedido:\n${historico}`
 
